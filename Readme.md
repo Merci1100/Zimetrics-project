@@ -1,4 +1,4 @@
-# 🧹 Sales Data Cleaner (Python ETL Project)
+# 🧹 Problem 2: Sales Data Cleaner (Python ETL Project)
 
 ## 📌 Project Overview
 **Sales Data Cleaner** is a Python-based ETL (Extract, Transform, Load) script designed to clean messy sales data stored in CSV format.  
@@ -54,6 +54,29 @@ python main.py
 
 clean_sales.json
 
+## 📸 Output Screenshots
+
+### Raw CSV Input
+![Raw CSV Data](screenshots/data_csv.png)
+
+### Cleaned JSON Output
+![Clean JSON Output](screenshots/clean_sales_json.png)
+
+---
+
+## 🚀 Future Improvements
+
+### ✅ Validation
+- Implement `try-except` blocks to gracefully handle:
+  - Missing or null values
+  - Corrupted or malformed rows
+  - Invalid numeric formats during conversion
+
+### ✅ Scalability
+- Use `with open()` context managers to:
+  - Ensure safe file handling
+  - Improve memory efficiency
+  - Support large-scale CSV processing
 
 
 

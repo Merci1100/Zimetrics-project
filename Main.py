@@ -17,6 +17,9 @@ CSV
 5. Output: Save the clean data to clean_sales.json .
 • The "Ask" (Screenshot Proof):
 • Screenshot of the final clean_sales.json file opened in a text editor showing the clean data."""
+
+
+
 import csv
 import json
 
