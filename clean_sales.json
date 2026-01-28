@@ -1,0 +1,14 @@
+[
+	{
+		"id": 101,
+		"name": "Widget A",
+		"price": 871.5,
+		"country": "USA"
+	},
+	{
+		"id": 102,
+		"name": "Widget B",
+		"price": 415.0,
+		"country": "Canada"
+	}
+]

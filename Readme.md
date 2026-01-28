@@ -40,7 +40,7 @@ price = price.replace("$", "").replace('"', "")
 
 1. Save your raw sales data file as:
 
-data.csv
+Sales.csv
 
 
 2. Run the script:

@@ -18,10 +18,10 @@ CSV
 • The "Ask" (Screenshot Proof):
 • Screenshot of the final clean_sales.json file opened in a text editor showing the clean data."""
 import csv
-
 import json
 
 def json_conversion(filename):
+# 1. EXTRACT: Open the source CSV file and convert it into a list for processing
     f=open(filename, 'r')
     reader=list(csv.reader(f))
 
@@ -30,13 +30,13 @@ def json_conversion(filename):
     jsonfile=[]
 
     check=[]
-
+# 2. TRANSFORM: Loop through each row of the CSV data
     for i in range(len(reader)):
         id= int(reader[i][0].strip())
         name=reader[i][1].replace('"',"").replace("'","").strip()
         price= float(reader[i][2].replace("$","")) *83
         cont=reader[i][3].strip()
-        
+# 3. DEDUPLICATION: Only add the item if the (name, price) combo hasn't been seen    
         if (name,  price) in check:
             continue
         else :
@@ -45,14 +45,15 @@ def json_conversion(filename):
                 { "id":id,
                 "name":name,
                 "price":price,
-                "contry" :cont            
+                "country" :cont            
                 }
             )
 
     print(jsonfile)
+# 4. LOAD: Export the cleaned list into a JSON file with tab indentation
     json.dump(jsonfile,open("clean_sales.json","w"),indent="\t")
-
-json_conversion("data.csv")
+# Execute the function
+json_conversion("sales.csv")
 
 
     
