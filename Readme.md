@@ -55,4 +55,25 @@ python main.py
 clean_sales.json
 
 
+
 ---
+
+## 🧠 Logic & Implementation
+
+### 🔹 Approach
+- Used list-based iteration to process CSV rows
+- Maintained a checklist of `(product_name, price)` tuples
+- Ensured only unique records were added
+- Converted cleaned data into JSON format
+
+### 🔹 Bug Encountered
+- `float()` conversion failed due to:
+- Dollar signs (`$`)
+- Quotation marks (`"`)
+
+### 🔹 Bug Fix
+- Sanitized price strings using chained `.replace()` methods before conversion
+
+Example:
+```python
+price = price.replace("$", "").replace('"', "")
